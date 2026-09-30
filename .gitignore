@@ -25,6 +25,14 @@ skills/Wangzhixian_Dialogue/references/relationship.md
 skills/Wangzhixian_Dialogue/references/counterpart.md
 
 # ------------------------------------------------------------
+# 内部记录技能（2026-09-30 从 README 第二部分移出）
+#   实际存放位置在项目仓库之外：~/.workbuddy/skills/wangzhixian-dialogue-internal/
+#   这里只是兜底——万一有人把它复制进项目目录，也不会被提交。
+# ------------------------------------------------------------
+*wangzhixian-dialogue-internal*
+*wangzhixian-dialogue-internal/**
+
+# ------------------------------------------------------------
 # 内部文档（不对外）
 # ------------------------------------------------------------
 *审计*
