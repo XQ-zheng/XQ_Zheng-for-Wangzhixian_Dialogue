@@ -56,8 +56,11 @@
 | 形态 | 平台 | 产物 | 状态 |
 | --- | --- | --- | --- |
 | **技能形态** | Windows / macOS / Linux | `skills/Wangzhixian_Dialogue/` | ✅ 现成可用 |
-| **桌面客户端** | Windows（x64 / ARM64）、macOS（Apple Silicon） | `.exe` / `.dmg` | ⚠️ 见**第七节**（需已上传到 Release） |
-| **移动客户端** | Android、iPhone | `.apk` / `.ipa` | ⚠️ 见**第七节**（需已上传到 Release） |
+
+> ⚠️ **本项目没有安装包。** 它是一组 Markdown 规则文件，不是可执行的桌面软件，也不是手机 App，
+> 因此**不存在** `.exe` / `.dmg` / `.apk` / `.ipa` 这类产物，也没有需要"安装"的程序。
+> 所谓"装上"，就是**把这一个目录放进运行时的 skills 目录**——做法见
+> [`安装说明书.md`](安装说明书.md) 与 [`各智能体安装说明.md`](各智能体安装说明.md)。
 
 **3.1 Windows 电脑**
 
@@ -75,7 +78,10 @@
 
 **3.3 Android 手机 / iPhone**
 
-从 Releases 下载对应安装包后按第七节的说明安装。
+**本技能没有手机客户端**，手机上无需安装、也无法安装。
+
+它是给**电脑端的智能体运行时**用的技能文件。手机上想用，只能通过手机上支持 Agent Skills 的客户端，
+把同一组文件放进它的 skills 目录里——同样没有安装包。
 
 ## 四、使用方法
 
@@ -87,7 +93,7 @@
 
 **4.2 Windows 电脑**
 
-1. 按第三节放好技能（或安装好 `.exe` 客户端）；
+1. 按第三节把技能目录放进 skills 目录；
 2. 在对话里点名 `$Wangzhixian_Dialogue`；
 3. 按提示输入**提示词**，再输入**微信号**；
 4. 两项都过之后**直接正常说话即可**——它会**主动**以"我"的口吻开口，不用你再提一次。
@@ -95,8 +101,7 @@
 **4.3 Mac 电脑**
 
 步骤与 Windows **完全一致**，唯一区别是技能目录路径（见 3.2）。
-若用 `.dmg` 客户端：打开镜像 → 把应用拖进「应用程序」→ 首次打开如被系统拦下，
-到「系统设置 → 隐私与安全性」里点「仍要打开」（具体以发布包的说明为准）。
+**Mac 上没有需要安装的客户端**——放好文件即可，不存在 `.dmg` 之类的安装过程。
 
 ## 五、输入输出示例
 
@@ -131,48 +136,29 @@
 > 而是"**你改完拿它对外提供服务时，必须把源码交给使用者**"。
 > 许可全文见仓库根目录的 `LICENSE` 文件。
 
-## 七、下载与安装说明
+## 七、关于"安装包"
 
-**所有安装包都放在 GitHub 的 Release 页面里**，下面的按钮**直接触发下载**。
+**本项目没有安装包，也不需要安装。**
 
-> ⚠️ **两个前提**：① 对应产物**已经上传到 Release**，否则按钮会 404；
-> ② **文件名必须与仓库里的实际产物一致**。
-> **发布前请先把下面表格里的仓库地址与文件名核对一遍。**
+技能本体是一组 Markdown 规则文件（`SKILL.md` + `references/`），不是可执行的桌面软件，也不是手机 App。
+因此不存在 `.exe` / `.dmg` / `.apk` / `.ipa` 这类产物，也没有可供下载安装程序的 Release 页面。
 
-**⚙️ 唯一需要填的地方**：把 `<OWNER>/<REPO>` 换成真实仓库地址（共 1 处，出现 6 次）。
+| 你可能会找 | 实际情况 |
+| --- | --- |
+| Windows 安装包 `.exe` | ❌ 不存在 |
+| Mac 安装包 `.dmg` | ❌ 不存在 |
+| 安卓安装包 `.apk` | ❌ 不存在 |
+| iPhone 安装包 `.ipa` | ❌ 不存在 |
+| Release 下载页里的安装程序 | ❌ 不存在（只有源码快照） |
 
-| 平台 | 架构 / 说明 | 安装包 | 下载 |
-| --- | --- | --- | --- |
-| **Windows**（绝大多数电脑） | **x64**（即 AMD64） | `.exe` | [![Windows x64](https://img.shields.io/badge/Windows-x64_.exe-0078D6?style=for-the-badge&logo=windows)](https://github.com/OWNER/REPO/releases/latest/download/PROJECT-VERSION-x64-Setup.exe) |
-| **Windows**（ARM 设备） | ARM64 | `.exe` | [![Windows ARM64](https://img.shields.io/badge/Windows-ARM64_.exe-0078D6?style=for-the-badge&logo=windows)](https://github.com/OWNER/REPO/releases/latest/download/PROJECT-VERSION-arm64-Setup.exe) |
-| **Mac** | Apple Silicon（M 系列）；Intel 机型见下方说明 | `.dmg` | [![macOS DMG](https://img.shields.io/badge/macOS-.dmg-000000?style=for-the-badge&logo=apple)](https://github.com/OWNER/REPO/releases/latest/download/PROJECT-VERSION-arm64.dmg) |
-| **Android 手机** | 直接在手机上安装 | `.apk` | [![Android APK](https://img.shields.io/badge/Android-.apk-3DDC84?style=for-the-badge&logo=android)](https://github.com/OWNER/REPO/releases/latest/download/PROJECT-VERSION-universal.apk) |
-| **iPhone** | 需自签侧载（未上架 App Store） | `.ipa` | [![iOS IPA](https://img.shields.io/badge/iPhone-.ipa-000000?style=for-the-badge&logo=apple)](https://github.com/OWNER/REPO/releases/latest/download/PROJECT-VERSION-unsigned.ipa) |
+**那怎么"装"？** 所谓安装，只是**把这一个目录放进运行时的 skills 目录**：
 
-**看不清产物全貌时**：[![全部产物](https://img.shields.io/badge/前往-Release_页面-60A5FA?style=for-the-badge&logo=github)](https://github.com/OWNER/REPO/releases/latest)
+```
+skills/Wangzhixian_Dialogue/
+```
 
-### 各平台安装步骤
+两种做法：
 
-**Windows（`.exe`）**
-1. 下载对应架构的 `.exe`（不确定就选 **x64**，这是绝大多数电脑）；
-2. 双击运行，按向导一路「下一步」；
-3. 若弹出 SmartScreen 蓝色警告 → **更多信息** → **仍要运行**。
-
-**Mac（`.dmg`）**
-1. 下载 `.dmg` 并打开；
-2. 把应用图标拖进「应用程序」；
-3. 首次打开若提示"无法验证开发者" → 右键应用选「打开」，或到
-   「系统设置 → 隐私与安全性」点「仍要打开」。
-
-**Android（`.apk`）**
-1. 在手机上打开下载好的 `.apk`；
-2. 系统提示"不允许安装未知来源应用" → 按提示为该来源**临时开启权限**；
-3. 安装完成后可关闭该权限。
-
-**iPhone（`.ipa`）**
-1. `.ipa` **不能像 Android 一样直接安装**，需要自签工具（如 AltStore、Sideloadly）或企业证书；
-2. 用工具把 `.ipa` 侧载到手机，并在「设置 → 通用 → VPN 与设备管理」中**信任对应证书**；
-3. 自签证书**有效期通常为 7 天**，到期需重新侧载。
-
-> 💡 **Intel 芯片的 Mac**：若 Release 里只提供 Apple Silicon（arm64）版本，
-> Intel 机型可通过 Rosetta 或自行从源码构建，**以实际发布产物为准**。
+- **不想碰命令行** → 看 [`安装说明书.md`](安装说明书.md) 的**场景一**（让智能体替你下载并放好，一条命令都不用敲）；
+- **要装到别的智能体上**（Claude Code / CodeBuddy / GitHub Copilot / Codex CLI / Cursor / OpenCode / Gemini CLI 等）
+  → 看 [`各智能体安装说明.md`](各智能体安装说明.md)。
